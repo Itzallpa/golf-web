@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Backend</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .admin-panel {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .admin-panel input[type="text"],
+        .admin-panel textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .admin-panel button {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-panel">
+        <h1>Admin Panel</h1>
+        <h2>Add / Update Information</h2>
+        <input type="text" id="infoTitle" placeholder="Title">
+        <textarea id="infoContent" placeholder="Content"></textarea>
+        <button onclick="addOrUpdateInfo()">Add / Update</button>
+        <h2>Delete Information</h2>
+        <input type="text" id="deleteTitle" placeholder="Title">
+        <button onclick="deleteInfo()">Delete</button>
+        <h2>Import Information</h2>
+        <input type="file" id="importFile">
+        <button onclick="importInfo()">Import</button>
+    </div>
+    <script>
+        function addOrUpdateInfo() {
+            var title = document.getElementById('infoTitle').value;
+            var content = document.getElementById('infoContent').value;
+            // Send a request to the server to add or update the information
+        }
+
+        function deleteInfo() {
+            var title = document.getElementById('deleteTitle').value;
+            // Send a request to the server to delete the information
+        }
+
+        function importInfo() {
+            var file = document.getElementById('importFile').files[0];
+            // Send a request to the server to import the information
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KMITL GOLF & SOCIETY CLUB</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        header {
+            background-color: orange;
+            padding: 10px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+        }
+
+        main {
+            min-height: calc(100vh - 70px); /* Subtract header height */
+            padding-bottom: 50px; /* Add space for footer */
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: orange;
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <h1 style="position: absolute; top: -4; left: 1; transform: translate(0, 0);">KMITLGOLF &amp; SOCIETY CLUB</h1>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#membership">Membership</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Rest of the code -->
+    </main>
+
+    <footer>
+        <p>&copy; 2022 KMITL GOLF &amp; SOCIETY CLUB. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Array of image URLs
+        var images = [
+            "image1.jpg",
+            "image2.jpg",
+            "image3.jpg"
+        ];
+
+        // Function to change the image
+        function changeImage() {
+            var img = document.getElementById("slideshow");
+            var currentIndex = parseInt(img.dataset.index);
+            var nextIndex = (currentIndex + 1) % images.length;
+            img.src = images[nextIndex];
+            img.dataset.index = nextIndex;
+        }
+
+        // Start the slideshow
+        setInterval(changeImage, 3000);
+    </script>
+</body>
+</html>
